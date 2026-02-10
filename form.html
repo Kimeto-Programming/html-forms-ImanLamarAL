@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Company Registration / Service Request Form</title>
+</head>
+<body>
+  <h1>Company Registration / Service Request Form</h1>
+  <form action="#" method="post">
+
+    <!-- Personal Information -->
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required minlength="2" maxlength="50"><br><br>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="1234567890"><br><br>
+    </fieldset>
+
+    <!-- Company Information -->
+    <fieldset>
+      <legend>Company Information</legend>
+
+      <label for="companyname">Company Name:</label>
+      <input type="text" id="companyname" name="companyname" required><br><br>
+
+      <label for="website">Company Website:</label>
+      <input type="url" id="website" name="website"><br><br>
+
+      <label for="size">Company Size:</label>
+      <select id="size" name="size" required>
+        <option value="">--Select--</option>
+        <option value="small">1-10 employees</option>
+        <option value="medium">11-50 employees</option>
+        <option value="large">51-200 employees</option>
+        <option value="enterprise">200+ employees</option>
+      </select><br><br>
+
+      <label for="industry">Industry:</label>
+      <input type="text" id="industry" name="industry" required><br><br>
+    </fieldset>
+
+    <!-- Service Request -->
+    <fieldset>
+      <legend>Service Request</legend>
+
+      <p>Service Type:</p>
+      <label><input type="radio" name="servicetype" value="consulting" required> Consulting</label>
+      <label><input type="radio" name="servicetype" value="development"> Development</label>
+      <label><input type="radio" name="servicetype" value="support"> Support</label><br><br>
+
+      <p>Preferred Contact Method:</p>
+      <label><input type="checkbox" name="contactmethod" value="email"> Email</label>
+      <label><input type="checkbox" name="contactmethod" value="phone"> Phone</label>
+      <label><input type="checkbox" name="contactmethod" value="video"> Video Call</label><br><br>
+
+      <label for="appointmentdate">Appointment Date:</label>
+      <input type="date" id="appointmentdate" name="appointmentdate" required><br><br>
+
+      <label for="appointmenttime">Appointment Time:</label>
+      <input type="time" id="appointmenttime" name="appointmenttime" required><br><br>
+
+      <label for="budget">Budget Range:</label>
+      <input type="number" id="budget" name="budget" min="100" max="100000" required><br><br>
+    </fieldset>
+
+    <!-- Message and Agreement -->
+    <fieldset>
+      <legend>Message and Agreement</legend>
+
+      <label for="message">Additional Information:</label><br>
+      <textarea id="message" name="message" rows="5" cols="40" minlength="10" maxlength="500"></textarea><br><br>
+
+      <label>
+        <input type="checkbox" name="terms" required>
+        I agree to the Terms and Conditions
+      </label><br><br>
+    </fieldset>
+
+    <!-- Buttons -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+
+  </form>
+</body>
+</html>
